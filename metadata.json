@@ -1,0 +1,29 @@
+{
+  "slug": "invoice-tax-breakdown-reconciler",
+  "title": "Invoice Tax Breakdown Reconciler",
+  "category": "finance",
+  "description": "Reconcile invoice line, tax, and total evidence using decimal arithmetic.",
+  "fields": {
+    "currency_code": {
+      "label": "currency code",
+      "kind": "required",
+      "minimum": 0
+    },
+    "line_items": {
+      "label": "line items",
+      "kind": "list",
+      "minimum": 1
+    },
+    "tax_components": {
+      "label": "tax components",
+      "kind": "list",
+      "minimum": 1
+    },
+    "grand_total": {
+      "label": "grand total",
+      "kind": "number",
+      "minimum": 0
+    }
+  },
+  "limitations": "Uses caller-provided evidence only; cannot confirm external facts. Human review remains required."
+}

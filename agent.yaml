@@ -1,0 +1,11 @@
+spec_version: "0.1.0"
+name: invoice-tax-breakdown-reconciler
+version: 0.1.0
+description: Reconcile invoice line, tax, and total evidence using decimal arithmetic.
+skills:
+  - invoice-tax-breakdown-reconciler-skill
+tools:
+  - review-invoice-tax-breakdown-reconciler
+tags:
+  - finance
+  - evidence-driven

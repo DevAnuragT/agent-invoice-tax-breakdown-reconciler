@@ -1,0 +1,10 @@
+{
+  "currency_code": "evidence-record",
+  "line_items": [
+    "record-1"
+  ],
+  "tax_components": [
+    "record-1"
+  ],
+  "grand_total": 1
+}

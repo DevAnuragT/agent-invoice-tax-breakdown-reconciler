@@ -1,0 +1,59 @@
+{
+  "name": "review-invoice-tax-breakdown-reconciler",
+  "description": "Run Invoice Tax Breakdown Reconciler",
+  "version": "0.1.0",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "payload": {
+        "type": "object",
+        "properties": {
+          "currency_code": {
+            "type": "string",
+            "description": "currency code"
+          },
+          "line_items": {
+            "type": "array",
+            "description": "line items"
+          },
+          "tax_components": {
+            "type": "array",
+            "description": "tax components"
+          },
+          "grand_total": {
+            "type": "number",
+            "description": "grand total"
+          }
+        },
+        "required": [
+          "currency_code",
+          "line_items",
+          "tax_components",
+          "grand_total"
+        ]
+      }
+    },
+    "required": [
+      "payload"
+    ]
+  },
+  "output_schema": {
+    "type": "object",
+    "properties": {
+      "status": {
+        "type": "string"
+      },
+      "score": {
+        "type": "object"
+      },
+      "findings": {
+        "type": "array"
+      }
+    }
+  },
+  "implementation": {
+    "type": "script",
+    "path": "review-invoice-tax-breakdown-reconciler.py",
+    "runtime": "python3"
+  }
+}
